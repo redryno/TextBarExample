@@ -23,10 +23,11 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (object == self.superview && [keyPath isEqualToString:@"center"]) {
         CGFloat height = [UIScreen mainScreen].bounds.size.height;
-        CGFloat offset = height - (self.superview.frame.origin.y + self.writeTextView.bounds.size.height);
-        if (offset > 0 && self.writeTextView.bottomConstraint.constant > 0) {
-            self.writeTextView.bottomConstraint.constant = MAX(0, offset);
-            [self.writeTextView layoutIfNeeded];
+        CGFloat offset = height - (self.superview.frame.origin.y + self.inputView.bounds.size.height);
+        
+        if (offset > 0 && self.inputView.bottomConstraint.constant > 0) {
+            self.inputView.bottomConstraint.constant = MAX(0, offset);
+            [self.inputView layoutIfNeeded];
         }
     }
 }

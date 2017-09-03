@@ -82,16 +82,17 @@
 - (IBAction)didTapSendButton:(id)sender {
     NSString *text = self.accessoryView.textView.text;
     NSString *trimmedText = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    Content *content = [[Content alloc] initWithContext:context];
-    content.text = trimmedText;
-    content.createdAt = [NSDate date];
-    
-    NSError *error = nil;
-    if (![context save:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-        abort();
+    if (trimmedText.length > 0) {
+        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+        Content *content = [[Content alloc] initWithContext:context];
+        content.text = trimmedText;
+        content.createdAt = [NSDate date];
+        
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+            abort();
+        }
     }
     [self.accessoryView reset];
 }

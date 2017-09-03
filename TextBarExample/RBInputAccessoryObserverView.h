@@ -11,6 +11,6 @@
 
 @interface RBInputAccessoryObserverView : UIView
 
-@property (strong, nonatomic) RBInputAccessoryView *writeTextView;
+@property (strong, nonatomic) RBInputAccessoryView *inputView;
 
 @end

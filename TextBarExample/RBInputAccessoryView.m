@@ -26,7 +26,7 @@
     RBInputAccessoryObserverView *observerView = [[RBInputAccessoryObserverView alloc] initWithFrame:frame];
     observerView.backgroundColor = UIColor.clearColor;
     observerView.userInteractionEnabled = NO;
-    observerView.writeTextView = self;
+    observerView.inputView = self;
     self.observerView = observerView;
     self.textView.inputAccessoryView = observerView;
 }
