@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0334148E1F5B29210087A66F /* RBPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0334148D1F5B29210087A66F /* RBPlaceholderTextView.m */; };
 		03564FDA1F59D34600BF1659 /* TextBarExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03564FD81F59D34600BF1659 /* TextBarExample.xcdatamodeld */; };
 		03975EAE1F560F8E0095BB0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03975EAD1F560F8E0095BB0F /* main.m */; };
 		03975EB11F560F8E0095BB0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03975EB01F560F8E0095BB0F /* AppDelegate.m */; };
@@ -16,10 +17,11 @@
 		03975EBC1F560F8E0095BB0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03975EBA1F560F8E0095BB0F /* LaunchScreen.storyboard */; };
 		03975EC71F56330D0095BB0F /* RBInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03975EC41F56330C0095BB0F /* RBInputAccessoryView.m */; };
 		03975EC81F56330D0095BB0F /* RBInputAccessoryObserverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03975EC61F56330D0095BB0F /* RBInputAccessoryObserverView.m */; };
-		03975ECB1F5687640095BB0F /* RBBorderedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03975ECA1F5687640095BB0F /* RBBorderedTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0334148C1F5B29210087A66F /* RBPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPlaceholderTextView.h; sourceTree = "<group>"; };
+		0334148D1F5B29210087A66F /* RBPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPlaceholderTextView.m; sourceTree = "<group>"; };
 		03564FD91F59D34600BF1659 /* TextBarExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TextBarExample.xcdatamodel; sourceTree = "<group>"; };
 		03975EA91F560F8E0095BB0F /* TextBarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextBarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03975EAD1F560F8E0095BB0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,8 +37,6 @@
 		03975EC41F56330C0095BB0F /* RBInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBInputAccessoryView.m; sourceTree = "<group>"; };
 		03975EC51F56330C0095BB0F /* RBInputAccessoryObserverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBInputAccessoryObserverView.h; sourceTree = "<group>"; };
 		03975EC61F56330D0095BB0F /* RBInputAccessoryObserverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBInputAccessoryObserverView.m; sourceTree = "<group>"; };
-		03975EC91F5687640095BB0F /* RBBorderedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBorderedTextView.h; sourceTree = "<group>"; };
-		03975ECA1F5687640095BB0F /* RBBorderedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBorderedTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +74,8 @@
 				03975EB21F560F8E0095BB0F /* ViewController.h */,
 				03975EB31F560F8E0095BB0F /* ViewController.m */,
 				03975EB51F560F8E0095BB0F /* Main.storyboard */,
-				03975EC91F5687640095BB0F /* RBBorderedTextView.h */,
-				03975ECA1F5687640095BB0F /* RBBorderedTextView.m */,
+				0334148C1F5B29210087A66F /* RBPlaceholderTextView.h */,
+				0334148D1F5B29210087A66F /* RBPlaceholderTextView.m */,
 				03975EC31F56330C0095BB0F /* RBInputAccessoryView.h */,
 				03975EC41F56330C0095BB0F /* RBInputAccessoryView.m */,
 				03975EC51F56330C0095BB0F /* RBInputAccessoryObserverView.h */,
@@ -170,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03975ECB1F5687640095BB0F /* RBBorderedTextView.m in Sources */,
+				0334148E1F5B29210087A66F /* RBPlaceholderTextView.m in Sources */,
 				03564FDA1F59D34600BF1659 /* TextBarExample.xcdatamodeld in Sources */,
 				03975EB41F560F8E0095BB0F /* ViewController.m in Sources */,
 				03975EB11F560F8E0095BB0F /* AppDelegate.m in Sources */,

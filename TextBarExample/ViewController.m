@@ -93,9 +93,7 @@
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
     }
-    
-    self.accessoryView.textView.text = @"";
-    self.accessoryView.button.enabled = NO;
+    [self.accessoryView reset];
 }
 
 #pragma mark - UITableViewDataSource

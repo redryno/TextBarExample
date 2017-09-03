@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="QTl-2Q-i5U" id="u9n-pG-BuH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5b-ky-Ejy">
@@ -60,25 +60,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqo-od-nqL" customClass="RBInputAccessoryView">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XjU-Yl-fHh" customClass="RBBorderedTextView">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XjU-Yl-fHh" customClass="RBPlaceholderTextView">
                                         <rect key="frame" x="44" y="6" width="287" height="32"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="0.20000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Send a message"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="removeInsets" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="delegate" destination="bqo-od-nqL" id="fO4-iX-icI"/>
                                         </connections>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send a message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSJ-Cb-2Yg">
-                                        <rect key="frame" x="49" y="6" width="107" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="5c2-ZV-RMt"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.7725490196" green="0.79064251610000003" blue="0.79779575889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVN-Of-5Iu" userLabel="Send Button">
                                         <rect key="frame" x="331" y="0.0" width="44" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -117,8 +112,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="gSJ-Cb-2Yg" firstAttribute="leading" secondItem="bqo-od-nqL" secondAttribute="leading" constant="49" id="08j-bW-ate"/>
-                                    <constraint firstAttribute="bottom" secondItem="gSJ-Cb-2Yg" secondAttribute="bottom" constant="6" id="2j1-ky-d4u"/>
                                     <constraint firstItem="7RG-Fy-CNl" firstAttribute="leading" secondItem="bqo-od-nqL" secondAttribute="leading" id="62t-zH-5b6"/>
                                     <constraint firstAttribute="trailing" secondItem="sVN-Of-5Iu" secondAttribute="trailing" id="6w7-vl-WtQ"/>
                                     <constraint firstItem="sVN-Of-5Iu" firstAttribute="top" secondItem="bqo-od-nqL" secondAttribute="top" id="Fsx-6p-GRf"/>
@@ -128,7 +121,6 @@
                                     <constraint firstItem="sVN-Of-5Iu" firstAttribute="leading" secondItem="XjU-Yl-fHh" secondAttribute="trailing" id="RM6-Yv-y8g"/>
                                     <constraint firstAttribute="height" constant="44" placeholder="YES" id="cc2-5s-KhT"/>
                                     <constraint firstItem="zP7-A8-I6A" firstAttribute="leading" secondItem="bqo-od-nqL" secondAttribute="leading" id="cw5-li-SJv"/>
-                                    <constraint firstItem="gSJ-Cb-2Yg" firstAttribute="top" secondItem="bqo-od-nqL" secondAttribute="top" constant="6" id="itl-c7-UsX"/>
                                     <constraint firstItem="XjU-Yl-fHh" firstAttribute="top" secondItem="bqo-od-nqL" secondAttribute="top" constant="6" id="oaR-5m-dWC"/>
                                     <constraint firstAttribute="bottom" secondItem="XjU-Yl-fHh" secondAttribute="bottom" constant="6" id="yIh-dp-Tor"/>
                                     <constraint firstItem="zP7-A8-I6A" firstAttribute="top" secondItem="bqo-od-nqL" secondAttribute="top" id="z6h-F1-lmw"/>
@@ -136,7 +128,6 @@
                                 <connections>
                                     <outlet property="bottomConstraint" destination="hXw-HR-fT8" id="iha-QP-RLu"/>
                                     <outlet property="button" destination="sVN-Of-5Iu" id="eKz-9G-608"/>
-                                    <outlet property="placeholder" destination="gSJ-Cb-2Yg" id="Huj-89-QPL"/>
                                     <outlet property="textView" destination="XjU-Yl-fHh" id="dxX-2n-fl6"/>
                                 </connections>
                             </view>

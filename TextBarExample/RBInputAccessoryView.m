@@ -21,7 +21,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.backgroundColor = [UIColor colorWithWhite:1 alpha:0.96];
     
     CGRect frame = CGRectMake(0, 0, 320, 0);
     RBInputAccessoryObserverView *observerView = [[RBInputAccessoryObserverView alloc] initWithFrame:frame];
@@ -35,6 +34,12 @@
 - (void)setBounds:(CGRect)bounds {
     [super setBounds:bounds];
     [self observerViewHeight:self.bounds.size.height];
+}
+
+- (void)reset {
+    self.textView.text = @"";
+    self.textView.placeholderLabel.alpha = 1;
+    self.button.enabled = NO;
 }
 
 #pragma mark - Private
@@ -60,9 +65,7 @@
 - (BOOL)resignFirstResponder {
     [super resignFirstResponder];
     [self.textView resignFirstResponder];
-    self.textView.text = @"";
-    self.placeholder.alpha = 1;
-    self.button.enabled = NO;
+    [self reset];
     return YES;
 }
 
@@ -76,27 +79,25 @@
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
-    if (textView.text.length == 0) {
-        self.placeholder.alpha = 1;
-    }
+    self.textView.placeholderLabel.alpha = (textView.text.length == 0) ? 1 : 0;
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
     if (textView.text.length > 0) {
-        self.placeholder.alpha = 0;
+        self.textView.placeholderLabel.alpha = 0;
         self.button.enabled = YES;
     } else {
-        self.placeholder.alpha = 1;
+        self.textView.placeholderLabel.alpha = 1;
         self.button.enabled = NO;
     }
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
     if (textView.text.length == 0) {
-        self.placeholder.alpha = 1;
+        self.textView.placeholderLabel.alpha = 1;
         self.button.enabled = NO;
     } else {
-        self.placeholder.alpha = 0;
+        self.textView.placeholderLabel.alpha = 0;
         self.button.enabled = YES;
     }
     [self observerViewHeight:0];

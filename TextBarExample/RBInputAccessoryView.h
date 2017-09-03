@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RBBorderedTextView.h"
+#import "RBPlaceholderTextView.h"
 
 static const CGFloat RBInputAccessoryViewHeight = 44.0;
 
@@ -15,8 +15,7 @@ static const CGFloat RBInputAccessoryViewHeight = 44.0;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *button;
-@property (weak, nonatomic) IBOutlet UILabel *placeholder;
-@property (weak, nonatomic) IBOutlet RBBorderedTextView *textView;
+@property (weak, nonatomic) IBOutlet RBPlaceholderTextView *textView;
 
 @property (strong, nonatomic) UIView *observerView;
 @property (strong, nonatomic) id userInfo;
@@ -24,6 +23,7 @@ static const CGFloat RBInputAccessoryViewHeight = 44.0;
 
 - (void)keyboardWillShow:(NSNotification *)aNotification inView:(UIView *)view;
 - (void)keyboardWillHide:(NSNotification *)aNotification inView:(UIView *)view;
+- (void)reset;
 
 @end
 
