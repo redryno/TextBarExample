@@ -33,7 +33,9 @@
 
 - (void)setBounds:(CGRect)bounds {
     [super setBounds:bounds];
-    [self observerViewHeight:self.bounds.size.height];
+    if (self.bottomConstraint.constant > 0 ) {
+        [self observerViewHeight:self.bounds.size.height];
+    }
 }
 
 - (void)reset {
